@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Pirata+One&family=UnifrakturMaguntia&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-linen: #E8DCC2;
+  --color-warp: #261C12;
+  --color-umber: #2E2114;
+  --color-madder: #93311F;
+  --color-gilt: #B68A3C;
+  --color-verdure: #57624A;
+  --color-thread: #6E5B41;
+
+  --font-blackletter: "UnifrakturMaguntia", serif;
+  --font-gothic: "Pirata One", serif;
+  --font-engraved: "Cinzel", serif;
+  --font-prose: "EB Garamond", serif;
+}
+
+@layer utilities {
+  .bg-pattern-linen {
+    background-image: 
+      linear-gradient(to right, rgba(38, 28, 18, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(38, 28, 18, 0.03) 1px, transparent 1px);
+    background-size: 6px 3px;
+    mix-blend-mode: multiply;
+  }
+  
+  .filter-tapestry {
+    filter: sepia(0.35) saturate(0.85) contrast(0.96) brightness(1.02);
+  }
+
+  /* Arch lancet shape: M0 50 A50 50 0 0 1 100 50 L100 150 L0 150 Z */
+  /* Adjusted for percentages so it scales properly */
+  .mask-arch {
+    mask-image: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 100 150" xmlns="http://www.w3.org/2000/svg"><path d="M0 50 A50 50 0 0 1 100 50 L100 150 L0 150 Z" fill="black"/></svg>');
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 100 150" xmlns="http://www.w3.org/2000/svg"><path d="M0 50 A50 50 0 0 1 100 50 L100 150 L0 150 Z" fill="black"/></svg>');
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+  }
+
+  .drop-cap::first-letter {
+    font-family: var(--font-blackletter);
+    font-size: 4.6em;
+    float: left;
+    color: var(--color-madder);
+    line-height: 0.78;
+    margin-right: 0.1em;
+    margin-top: 0.15em;
+  }
+}
+
+body {
+  background-color: var(--color-linen);
+  color: var(--color-warp);
+  font-family: var(--font-prose);
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(to right, rgba(38, 28, 18, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(38, 28, 18, 0.05) 1px, transparent 1px);
+  background-size: 6px 3px;
+  mix-blend-mode: multiply;
+  z-index: 50;
+}
+

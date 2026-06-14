@@ -1,0 +1,8 @@
+{
+  "name": "The Roundtable Chronicle",
+  "description": "The Roundtable Ventures — a West African agricultural commodity exporter site with a neo-medieval tapestry aesthetic.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
