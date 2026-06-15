@@ -151,9 +151,9 @@ export default function Commodities() {
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover filter-tapestry group-hover:scale-105 transition-transform duration-1000"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-warp/90 via-warp/40 to-transparent flex flex-col justify-end p-8">
-                  <span className="font-engraved text-xs text-[#000918]/70 tracking-[0.3em] uppercase mb-2">{activeItem.cat}</span>
-                  <h2 className="font-engraved font-bold text-3xl md:text-5xl text-[#000918]">{activeItem.name}</h2>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#000918]/90 via-[#000918]/40 to-transparent flex flex-col justify-end p-8">
+                  <span className="font-engraved text-xs text-gilt tracking-[0.3em] uppercase mb-2">{activeItem.cat}</span>
+                  <h2 className="font-engraved font-bold text-3xl md:text-5xl text-linen">{activeItem.name}</h2>
                 </div>
               </div>
 

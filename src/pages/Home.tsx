@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import cultivationImg from '../assets/images/strawberry_harvest_1781456355178.jpg';
+import shipLoadingImg from '../assets/images/export_loading_ship_african_1781549845231.jpg';
+import truckLoadingImg from '../assets/images/export_loading_truck_african_1781549859610.jpg';
 import { 
   TapestryBand, 
   MillefleurStrip, 
@@ -281,7 +283,69 @@ export default function Home() {
         </ScrollReveal>
       </section>
 
-      {/* PANEL 5: GLOBAL TRAJECTORY */}
+      {/* PANEL 6: THE WORD AND THE WORK (TESTIMONIALS & OPERATIONS) */}
+      <TapestryBand thin />
+      <section className="py-24 px-6 relative bg-linen overflow-hidden">
+        <ScrollReveal>
+          <div className="max-w-7xl mx-auto flex flex-col items-center">
+            <div className="text-center mb-16 w-full flex flex-col items-center">
+              <span className="font-engraved text-xs text-madder tracking-[0.3em] uppercase mb-3">Chapter the Fifth — Voices of Trade</span>
+              <h2 className="font-gothic text-[40px] md:text-[50px] text-warp">
+                <span className="text-gilt mr-2">V.</span>The Word & The Work
+              </h2>
+              <OrnamentDivider />
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full">
+              <div className="flex flex-col gap-10">
+                <blockquote className="relative p-8 md:p-10 border border-gilt/20 bg-warp/5">
+                  <span className="absolute -top-6 left-6 text-6xl text-gilt opacity-40 font-serif">"</span>
+                  <p className="font-prose italic text-lg text-warp/90 leading-relaxed mb-6 relative z-10">
+                    A partner in truth. They maintained exact phytosanitary standards for every ton of sesame we received. The documentation process was seamless, and the shipment arrived exactly as contracted at the port of Rotterdam.
+                  </p>
+                  <footer className="flex flex-col relative z-10">
+                    <strong className="font-gothic text-warp text-xl uppercase tracking-wider">Henrik Lindstrom</strong>
+                    <span className="font-engraved text-xs text-thread mt-1 uppercase">Procurement Director, Nordic Agritrade</span>
+                  </footer>
+                </blockquote>
+
+                <blockquote className="relative p-8 md:p-10 border border-gilt/20 bg-warp/5 mt-4">
+                  <span className="absolute -top-6 left-6 text-6xl text-gilt opacity-40 font-serif">"</span>
+                  <p className="font-prose italic text-lg text-warp/90 leading-relaxed mb-6 relative z-10">
+                    We rely heavily on their steady supply of palm oil and dried ginger. When you trade by Letter of Credit, you need a house that understands swift compliance. The Roundtable has never missed a shipment window.
+                  </p>
+                  <footer className="flex flex-col relative z-10">
+                    <strong className="font-gothic text-warp text-xl uppercase tracking-wider">Aisha Al-Fayed</strong>
+                    <span className="font-engraved text-xs text-thread mt-1 uppercase">Head of Sourcing, GCC Essentials</span>
+                  </footer>
+                </blockquote>
+              </div>
+              
+              <div className="flex flex-col w-full gap-4">
+                <div className="w-full relative shadow-xl overflow-hidden border-4 border-warp bg-warp p-1">
+                  <img 
+                    src={shipLoadingImg} 
+                    alt="Dock workers loading export products onto a docked cargo ship at port" 
+                    className="w-full aspect-[4/3] object-cover transition-transform duration-[2s] hover:scale-105"
+                  />
+                </div>
+                <div className="w-full relative shadow-xl overflow-hidden border-4 border-warp bg-warp p-1">
+                  <img 
+                    src={truckLoadingImg} 
+                    alt="Workers loading agricultural products into a large truck" 
+                    className="w-full aspect-[21/9] object-cover transition-transform duration-[2s] hover:scale-105"
+                  />
+                </div>
+                <p className="font-engraved text-xs text-thread text-center uppercase tracking-widest mt-2">
+                  Active loading operations at port
+                </p>
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
+      </section>
+
+      {/* PANEL 7: GLOBAL TRAJECTORY */}
       <TapestryBand thin />
       <section className="py-24 px-6 relative bg-umber">
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'url(#pattern-bold)', opacity: 0.05 }} />
