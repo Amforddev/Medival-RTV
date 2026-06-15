@@ -36,7 +36,7 @@ function Navbar() {
       <div className="flex-1 flex items-center justify-between px-6 max-w-7xl mx-auto w-full">
         {/* Logo Area */}
         <Link to="/" aria-label="The Roundtable Ventures Home Page" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 md:w-11 md:h-11 rounded-full flex items-center justify-center mix-blend-multiply border border-gilt/30 group-hover:border-gilt transition-colors overflow-hidden">
+          <div className="w-10 h-10 md:w-11 md:h-11 rounded-full flex items-center justify-center bg-[#ECE5D5] border border-gilt/30 group-hover:border-gilt transition-colors overflow-hidden shrink-0 shadow-sm">
              <img src="/logo.png" alt="TRTV Logo" className="w-full h-full object-cover mix-blend-multiply" loading="lazy" referrerPolicy="no-referrer" />
           </div>
           <div className="flex flex-col">
@@ -158,7 +158,7 @@ function Footer() {
         {/* Left Column (5 cols) */}
         <div className="col-span-1 lg:col-span-5 flex flex-col gap-8">
           <div className="flex items-center gap-4">
-            <div className="w-14 h-14 rounded-full flex items-center justify-center p-1 shrink-0 overflow-hidden bg-warp shadow-md">
+            <div className="w-14 h-14 rounded-full flex items-center justify-center p-1 shrink-0 overflow-hidden bg-[#ECE5D5] shadow-md border border-gilt/30">
                <img src="/logo.png" alt="TRTV Decorative Logo" className="w-full h-full object-contain mix-blend-multiply" loading="lazy" referrerPolicy="no-referrer" />
             </div>
             <div className="flex flex-col">
