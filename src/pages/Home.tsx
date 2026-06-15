@@ -128,9 +128,10 @@ export default function Home() {
               <div className="flex flex-col items-center w-full">
                 <div className="w-full max-w-[28rem] aspect-[3/4] mask-arch bg-verdure relative overflow-hidden group">
                   <img 
-                    src="https://images.unsplash.com/photo-1530507629858-e4977d30e9e0?q=80&w=2070&auto=format&fit=crop" 
+                    src="https://images.unsplash.com/photo-1530507629858-e4977d30e9e0?q=70&w=800&auto=format&fit=crop" 
                     alt="West African Farm Cultivation"
                     loading="lazy"
+                    decoding="async"
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover filter-tapestry group-hover:scale-105 transition-transform duration-[1.5s]"
                   />
@@ -172,6 +173,7 @@ export default function Home() {
                             src={item.img} 
                             alt={item.name}
                             loading="lazy"
+                            decoding="async"
                             referrerPolicy="no-referrer"
                             className="w-full h-full object-cover filter-tapestry group-hover:scale-105 transition-transform duration-700" 
                           />
@@ -299,6 +301,7 @@ export default function Home() {
                   src="/Map.png"
                   alt="Global map showing Nigeria, Ghana, Kenya, Rwanda" 
                   loading="lazy"
+                  decoding="async"
                   referrerPolicy="no-referrer"
                   className="w-full object-contain mix-blend-screen opacity-90 transition-opacity duration-500" 
                 />

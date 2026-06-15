@@ -31,9 +31,10 @@ export default function About() {
               <div className="absolute inset-[20%] rounded-full border border-verdure/40" style={{ background: '#2E7A3E' }}></div>
               <div className="absolute inset-[30%] rounded-full overflow-hidden border-4 border-linen shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1589923188900-85dae523342b?q=80&w=800&auto=format&fit=crop" 
+                  src="https://images.unsplash.com/photo-1589923188900-85dae523342b?q=70&w=400&auto=format&fit=crop" 
                   alt="Farmer"
                   loading="lazy"
+                  decoding="async"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover"
                 />
@@ -100,6 +101,7 @@ export default function About() {
                    src="/Map.png"
                    alt="Global map showing Nigeria, Ghana, Kenya, Rwanda" 
                    loading="lazy"
+                   decoding="async"
                    referrerPolicy="no-referrer"
                    className="w-full object-contain" 
                  />

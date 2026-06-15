@@ -18,6 +18,76 @@ const commodities = [
   { id: 'catfish', name: 'River Catfish' }
 ];
 
+const commodityPackagingOptions: Record<string, { value: string; label: string }[]> = {
+  palm: [
+    { value: "Flexitank (20-24 MT)", label: "Flexitank (20-24 MT)" },
+    { value: "20L Jerry Cans", label: "20L Jerry Cans" },
+    { value: "210L Steel Drums", label: "210L Steel Drums" },
+    { value: "Custom / Other", label: "Custom / Other" }
+  ],
+  beans: [
+    { value: "50kg PP Bags", label: "50kg PP Bags" },
+    { value: "100kg PP Bags", label: "100kg PP Bags" },
+    { value: "Custom / Other", label: "Custom / Other" }
+  ],
+  sesame: [
+    { value: "50kg PP Bags", label: "50kg PP Bags" },
+    { value: "Premium Jute Bags", label: "Premium Jute Bags" },
+    { value: "Custom / Other", label: "Custom / Other" }
+  ],
+  chia: [
+    { value: "25kg PP Bags", label: "25kg PP Bags" },
+    { value: "50kg PP Bags", label: "50kg PP Bags" },
+    { value: "Custom / Other", label: "Custom / Other" }
+  ],
+  cashew: [
+    { value: "50kg PP Bags", label: "50kg PP Bags" },
+    { value: "80kg Jute Bags", label: "80kg Jute Bags" },
+    { value: "Custom / Other", label: "Custom / Other" }
+  ],
+  egusi: [
+    { value: "50kg PP Bags", label: "50kg PP Bags" },
+    { value: "Custom / Other", label: "Custom / Other" }
+  ],
+  ginger: [
+    { value: "40kg PP Bags", label: "40kg PP Bags" },
+    { value: "50kg PP Bags", label: "50kg PP Bags" },
+    { value: "Cleaned Jute Bags", label: "Cleaned Jute Bags" },
+    { value: "Custom / Other", label: "Custom / Other" }
+  ],
+  'ginger-powder': [
+    { value: "25kg Kraft Paper Bags", label: "25kg Kraft Paper Bags" },
+    { value: "50kg PP Bags", label: "50kg PP Bags" },
+    { value: "Custom / Other", label: "Custom / Other" }
+  ],
+  hibiscus: [
+    { value: "20-25kg PP Bags", label: "20-25kg PP Bags" },
+    { value: "Press-Packed Jute Bags", label: "Press-Packed Jute Bags" },
+    { value: "Custom / Other", label: "Custom / Other" }
+  ],
+  ogbono: [
+    { value: "50kg PP Bags", label: "50kg PP Bags" },
+    { value: "Custom / Other", label: "Custom / Other" }
+  ],
+  charcoal: [
+    { value: "Bulk Cargo Bags", label: "Bulk Cargo Bags" },
+    { value: "25kg PP Bags", label: "25kg PP Bags" },
+    { value: "Custom / Other", label: "Custom / Other" }
+  ],
+  catfish: [
+    { value: "10kg Frozen Cartons", label: "10kg Frozen Cartons" },
+    { value: "Premium Vacuum Packs", label: "Premium Vacuum Packs" },
+    { value: "Custom / Other", label: "Custom / Other" }
+  ],
+  default: [
+    { value: "50kg PP Bags", label: "50kg PP Bags" },
+    { value: "25kg PP Bags", label: "25kg PP Bags" },
+    { value: "Jute Bags", label: "Jute Bags" },
+    { value: "Flexitank (for Oils)", label: "Flexitank (for Oils)" },
+    { value: "Custom / Other", label: "Custom / Other" }
+  ]
+};
+
 export default function Quote() {
   const [searchParams] = useSearchParams();
   const [step, setStep] = useState(1);
@@ -40,12 +110,23 @@ export default function Quote() {
 
   useEffect(() => {
     if (searchParams.get('commodity')) {
-      setFormData(prev => ({ ...prev, commodityId: searchParams.get('commodity')! }));
+      const selectedCommodity = searchParams.get('commodity')!;
+      setFormData(prev => ({ 
+        ...prev, 
+        commodityId: selectedCommodity,
+        packaging: '' // Reset packaging when default search param changes
+      }));
     }
   }, [searchParams]);
 
   const updateForm = (key: string, value: string) => {
-    setFormData(prev => ({ ...prev, [key]: value }));
+    setFormData(prev => {
+      const updated = { ...prev, [key]: value };
+      if (key === 'commodityId') {
+        updated.packaging = ''; // Reset packaging on commodity change so they select from the new options
+      }
+      return updated;
+    });
   };
 
   const handleAjaxSubmit = async (e: React.FormEvent) => {
@@ -183,13 +264,7 @@ export default function Quote() {
                   <CustomSelect 
                     value={formData.packaging}
                     onChange={(val) => updateForm('packaging', val)}
-                    options={[
-                      { value: "50kg PP Bags", label: "50kg PP Bags" },
-                      { value: "25kg PP Bags", label: "25kg PP Bags" },
-                      { value: "Jute Bags", label: "Jute Bags" },
-                      { value: "Flexitank", label: "Flexitank (for Oils)" },
-                      { value: "Custom", label: "Custom / Other" }
-                    ]}
+                    options={commodityPackagingOptions[formData.commodityId] || commodityPackagingOptions.default}
                     placeholder="Select packaging..."
                   />
                 </div>
@@ -200,6 +275,7 @@ export default function Quote() {
                     {['FOB (Free On Board, Lagos)', 'CIF (Cost, Ins., Freight)'].map(term => (
                        <button
                          key={term}
+                         type="button"
                          onClick={() => updateForm('incoterm', term)}
                          className={`p-4 border text-left font-prose text-lg transition-colors ${formData.incoterm === term ? 'border-madder bg-madder/5 text-madder' : 'border-thread bg-white hover:border-warp'}`}
                        >
@@ -215,10 +291,11 @@ export default function Quote() {
                     {[
                       'Irrevocable Letter of Credit (L/C)', 
                       'Telegraphic Transfer (T/T) - 80% Advance, 20% After Delivery',
-                      'Documentary Collection - 80% Advance, 20% After Delivery'
+                      'Direct Bank Transfer (T/T or Wire)'
                     ].map(term => (
                        <button
                          key={term}
+                         type="button"
                          onClick={() => updateForm('payment', term)}
                          className={`p-4 border text-left font-prose text-lg transition-colors ${formData.payment === term ? 'border-warp bg-warp text-white' : 'border-thread bg-white hover:border-warp'}`}
                        >

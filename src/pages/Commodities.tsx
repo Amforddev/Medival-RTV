@@ -120,6 +120,7 @@ export default function Commodities() {
                   src={activeItem.img} 
                   alt={activeItem.name}
                   loading="lazy"
+                  decoding="async"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover filter-tapestry group-hover:scale-105 transition-transform duration-1000"
                 />
