@@ -96,7 +96,7 @@ export default function About() {
             </div>
 
             <div className="w-full max-w-6xl relative group flex justify-center">
-              <div className="w-full overflow-hidden border border-gilt/20 shadow-neutral-300 shadow-xl relative bg-black">
+              <div className="w-full overflow-hidden border border-gilt/20 shadow-neutral-300 shadow-xl relative bg-warp">
                  <img 
                    src="/Map.png"
                    alt="Global map showing Nigeria, Ghana, Kenya, Rwanda" 

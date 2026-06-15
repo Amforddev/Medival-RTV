@@ -78,7 +78,7 @@ function Navbar() {
               </button>
               
               {/* Dropdown Menu */}
-              <div className="absolute top-full right-0 mt-2 w-32 bg-white border border-thread opacity-0 invisible group-hover/lang:opacity-100 group-hover/lang:visible transition-all duration-200 z-50 shadow-xl">
+              <div className="absolute top-full right-0 mt-2 w-32 bg-umber border border-thread/30 opacity-0 invisible group-hover/lang:opacity-100 group-hover/lang:visible transition-all duration-200 z-50 shadow-xl">
                  <div className="flex flex-col">
                    <button onClick={() => handleLangChange('en', 'EN')} aria-label="Translate to English" className="px-4 py-3 text-left font-engraved text-xs text-warp hover:bg-warp/5 transition-colors border-b border-thread/50">ENGLISH</button>
                    <button onClick={() => handleLangChange('ar', 'AR')} aria-label="Translate to Arabic" className="px-4 py-3 text-left font-engraved text-xs text-warp hover:bg-warp/5 transition-colors border-b border-thread/50">ARABIC</button>
@@ -117,7 +117,7 @@ function Navbar() {
                 <button 
                   key={lang}
                   onClick={() => handleLangChange(codes[lang], lang)}
-                  className={`font-engraved text-xs px-3 py-1 rounded-full border ${currentLang === lang ? 'border-madder text-madder bg-madder/5' : 'border-thread text-warp bg-white'}`}
+                  className={`font-engraved text-xs px-3 py-1 rounded-full border ${currentLang === lang ? 'border-madder text-madder bg-madder/5' : 'border-thread/50 text-warp bg-umber'}`}
                 >
                   {lang}
                 </button>
@@ -158,7 +158,7 @@ function Footer() {
         {/* Left Column (5 cols) */}
         <div className="col-span-1 lg:col-span-5 flex flex-col gap-8">
           <div className="flex items-center gap-4">
-            <div className="w-14 h-14 rounded-full flex items-center justify-center p-1 shrink-0 overflow-hidden bg-linen shadow-md">
+            <div className="w-14 h-14 rounded-full flex items-center justify-center p-1 shrink-0 overflow-hidden bg-warp shadow-md">
                <img src="/logo.png" alt="TRTV Decorative Logo" className="w-full h-full object-contain mix-blend-multiply" loading="lazy" referrerPolicy="no-referrer" />
             </div>
             <div className="flex flex-col">

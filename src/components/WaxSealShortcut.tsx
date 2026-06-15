@@ -10,7 +10,7 @@ export default function WaxSealShortcut() {
     >
       <div className="relative flex items-center justify-center">
         {/* Hover label (Parchment Aesthetic) */}
-        <div className="absolute left-16 bg-white border border-gilt/30 py-1.5 px-3.5 shadow-xl rounded-sm opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-3 group-hover:translate-x-0 pointer-events-none whitespace-nowrap">
+        <div className="absolute left-16 bg-umber border border-gilt/40 py-1.5 px-3.5 shadow-xl rounded-sm opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-3 group-hover:translate-x-0 pointer-events-none whitespace-nowrap">
           <span className="font-engraved text-[10px] md:text-xs text-warp tracking-[0.18em] uppercase font-bold flex items-center gap-1.5">
             <span className="text-madder">✥</span> SEAL COVENANT
           </span>

@@ -2,13 +2,13 @@
 @import "tailwindcss";
 
 @theme {
-  --color-linen: #E8DCC2;
-  --color-warp: #261C12;
-  --color-umber: #2E2114;
-  --color-madder: #93311F;
-  --color-gilt: #B68A3C;
-  --color-verdure: #57624A;
-  --color-thread: #6E5B41;
+  --color-linen: #ECE5D5;
+  --color-warp: #FFFFFF;
+  --color-umber: #0B1327;
+  --color-madder: #E44C34;
+  --color-gilt: #CFA953;
+  --color-verdure: #253326;
+  --color-thread: #2D3D5E;
 
   --font-blackletter: "UnifrakturMaguntia", serif;
   --font-gothic: "Pirata One", serif;
@@ -19,7 +19,7 @@
 @layer utilities {
   .bg-parchment {
     position: relative;
-    background-color: #E8DCC2; /* base linen shade */
+    background-color: var(--color-umber); /* base dark umber navy shade */
   }
 
   .bg-parchment::before {
@@ -29,10 +29,10 @@
     pointer-events: none;
     z-index: 1;
     background-image: 
-      radial-gradient(circle at 50% 50%, rgba(250, 245, 233, 0.45) 0%, rgba(215, 198, 164, 0.25) 100%),
-      url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.07' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-    opacity: 0.95;
-    mix-blend-mode: multiply;
+      radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.02) 0%, rgba(0, 0, 0, 0.25) 100%),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.08' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.85;
+    mix-blend-mode: overlay;
     border-radius: inherit;
   }
 
@@ -44,14 +44,13 @@
 
   .bg-pattern-linen {
     background-image: 
-      linear-gradient(to right, rgba(38, 28, 18, 0.03) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(38, 28, 18, 0.03) 1px, transparent 1px);
+      linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
     background-size: 6px 3px;
-    mix-blend-mode: multiply;
   }
   
   .filter-tapestry {
-    filter: sepia(0.35) saturate(0.85) contrast(0.96) brightness(1.02);
+    filter: sepia(0.15) saturate(0.95) contrast(1.05) brightness(0.95);
   }
 
   /* Arch lancet shape: M0 50 A50 50 0 0 1 100 50 L100 150 L0 150 Z */
@@ -79,7 +78,7 @@
 }
 
 body {
-  background-color: var(--color-linen);
+  background-color: #060F25;
   color: var(--color-warp);
   font-family: var(--font-prose);
   position: relative;
@@ -91,10 +90,34 @@ body::before {
   inset: 0;
   pointer-events: none;
   background-image: 
-    linear-gradient(to right, rgba(38, 28, 18, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(38, 28, 18, 0.05) 1px, transparent 1px);
-  background-size: 6px 3px;
-  mix-blend-mode: multiply;
+    linear-gradient(to right, rgba(207, 169, 83, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(207, 169, 83, 0.035) 1px, transparent 1px);
+  background-size: 32px 32px;
   z-index: 50;
+}
+
+/* Background overrides to keep the entire website consistently dark navy */
+.bg-linen {
+  background-color: #060F25 !important;
+}
+
+.bg-linen\/90 {
+  background-color: rgba(6, 15, 37, 0.9) !important;
+}
+
+.bg-linen\/50 {
+  background-color: rgba(11, 19, 39, 0.5) !important;
+}
+
+.bg-linen\/30 {
+  background-color: rgba(11, 19, 39, 0.3) !important;
+}
+
+.bg-warp {
+  background-color: #0B1327 !important;
+}
+
+.bg-umber {
+  background-color: #0B1327 !important;
 }
 

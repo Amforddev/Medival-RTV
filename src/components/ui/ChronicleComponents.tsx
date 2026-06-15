@@ -32,21 +32,21 @@ export function CustomSelect({
       <button 
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full bg-white border border-thread p-4 font-prose text-lg text-left flex items-center justify-between transition-colors hover:border-warp focus:border-madder outline-none"
+        className="w-full bg-umber/40 border border-thread/40 p-4 font-prose text-lg text-left flex items-center justify-between transition-colors hover:border-gilt focus:border-gilt outline-none"
       >
-        <span className={value ? "text-warp" : "text-warp/40"}>
+        <span className={value ? "text-warp" : "text-warp/50"}>
           {selectedOption ? selectedOption.label : placeholder}
         </span>
-        <ChevronDown className={`w-5 h-5 text-warp transition-transform ${isOpen ? "rotate-180" : ""}`} />
+        <ChevronDown className={`w-5 h-5 text-warp/70 transition-transform ${isOpen ? "rotate-180" : ""}`} />
       </button>
 
       {isOpen && (
-        <div className="absolute top-full left-0 w-full mt-1 bg-white border border-thread shadow-xl z-50 max-h-60 overflow-y-auto">
+        <div className="absolute top-full left-0 w-full mt-1 bg-umber border border-thread/40 shadow-xl z-50 max-h-60 overflow-y-auto">
           {options.map((option) => (
             <button
               key={option.value}
               type="button"
-              className={`w-full text-left p-4 font-prose text-lg transition-colors hover:bg-warp/5 ${value === option.value ? 'bg-warp/5 text-madder' : 'text-warp'}`}
+              className={`w-full text-left p-4 font-prose text-lg transition-colors hover:bg-warp/5 ${value === option.value ? 'bg-warp/10 text-gilt font-bold' : 'text-warp'}`}
               onClick={() => {
                 onChange(option.value);
                 setIsOpen(false);

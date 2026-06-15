@@ -26,7 +26,7 @@ export default function Terms() {
             <div className="h-[1px] w-24 bg-gilt/40 mx-auto mt-6" />
           </div>
 
-          <PanelFrame className="p-8 md:p-12 bg-white/70 border-gilt/15 shadow-sm">
+          <PanelFrame className="p-8 md:p-12 bg-umber/60 border-gilt/15 shadow-sm">
             <div className="flex flex-col gap-10">
               
               {/* Sec 1 */}

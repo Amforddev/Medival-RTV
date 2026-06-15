@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { FileText, Sprout, Wheat, Leaf, Flame, Waves } from 'lucide-react';
@@ -23,6 +23,8 @@ export default function Commodities() {
   const { id } = useParams();
   const [activeItem, setActiveItem] = useState(commoditiesData[0]);
   const [activeTab, setActiveTab] = useState('Specs');
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     if (id) {
@@ -30,6 +32,16 @@ export default function Commodities() {
       if (found) setActiveItem(found);
     }
   }, [id]);
+
+  const handleScroll = () => {
+    if (scrollRef.current) {
+      if (scrollRef.current.scrollLeft > 20) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    }
+  };
 
   const categories = Array.from(new Set(commoditiesData.map(c => c.cat)));
 
@@ -52,8 +64,23 @@ export default function Commodities() {
       </div>
 
       {/* TABS STICKY BAR */}
-      <div className="sticky top-20 z-30 w-full bg-linen/90 backdrop-blur-md border-b border-warp/10 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6 overflow-x-auto no-scrollbar py-4 flex gap-8">
+      <div className="sticky top-20 z-30 w-full bg-linen/90 backdrop-blur-md border-b border-warp/10 shadow-sm relative">
+        {/* Right fade gradient indicating more content exists standard on mobile */}
+        <div className={`pointer-events-none absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-linen via-linen/80 to-transparent z-20 md:hidden transition-opacity duration-300 ${isScrolled ? 'opacity-30' : 'opacity-100'}`} />
+
+        {/* Animated slide helper, visible on load and disappears as soon as they swipe */}
+        {!isScrolled && (
+          <div className="absolute right-4 top-1/2 -translate-y-1/2 z-30 pointer-events-none flex items-center gap-1.5 bg-madder/15 border border-madder/20 text-madder px-3 py-1 rounded-full text-[10px] font-engraved tracking-widest uppercase animate-pulse duration-1000 md:hidden shadow-sm">
+            <span>Swipe</span>
+            <span className="text-xs">→</span>
+          </div>
+        )}
+
+        <div 
+          ref={scrollRef}
+          onScroll={handleScroll}
+          className="max-w-7xl mx-auto px-6 overflow-x-auto no-scrollbar py-4 flex gap-8 relative z-10"
+        >
            {categories.map(cat => {
               const itemsInCat = commoditiesData.filter(c => c.cat === cat);
               const hasActive = itemsInCat.some(c => c.id === activeItem.id);

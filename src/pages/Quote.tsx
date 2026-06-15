@@ -244,7 +244,7 @@ export default function Quote() {
                   />
                 </div>
 
-                <div className="flex flex-col">
+                 <div className="flex flex-col">
                   <label className="font-engraved text-[11px] text-warp/60 uppercase tracking-widest mb-2">Quantity (Metric Tons)</label>
                   <div className="relative">
                     <input 
@@ -252,7 +252,7 @@ export default function Quote() {
                       min="1"
                       value={formData.quantity}
                       onChange={e => updateForm('quantity', e.target.value)}
-                      className="w-full bg-white border border-thread p-4 font-prose text-xl outline-none focus:border-madder transition-colors"
+                      className="w-full bg-umber/40 border border-thread/40 p-4 font-prose text-xl outline-none focus:border-gilt transition-colors text-warp placeholder:text-warp/30"
                       placeholder="e.g. 20"
                     />
                     <span className="absolute right-4 top-1/2 -translate-y-1/2 font-engraved text-warp/40">MT</span>
@@ -277,7 +277,7 @@ export default function Quote() {
                          key={term}
                          type="button"
                          onClick={() => updateForm('incoterm', term)}
-                         className={`p-4 border text-left font-prose text-lg transition-colors ${formData.incoterm === term ? 'border-madder bg-madder/5 text-madder' : 'border-thread bg-white hover:border-warp'}`}
+                         className={`p-4 border text-left font-prose text-lg transition-colors ${formData.incoterm === term ? 'border-gilt bg-gilt/15 text-gilt font-bold shadow-[0_0_15px_rgba(207,169,83,0.1)]' : 'border-thread/40 bg-umber/40 text-warp hover:border-gilt hover:bg-umber/60'}`}
                        >
                          {term}
                        </button>
@@ -297,7 +297,7 @@ export default function Quote() {
                          key={term}
                          type="button"
                          onClick={() => updateForm('payment', term)}
-                         className={`p-4 border text-left font-prose text-lg transition-colors ${formData.payment === term ? 'border-warp bg-warp text-white' : 'border-thread bg-white hover:border-warp'}`}
+                         className={`p-4 border text-left font-prose text-lg transition-colors ${formData.payment === term ? 'border-gilt bg-gilt/15 text-gilt font-bold shadow-[0_0_15px_rgba(207,169,83,0.1)]' : 'border-thread/40 bg-umber/40 text-warp hover:border-gilt hover:bg-umber/60'}`}
                        >
                          {term}
                        </button>
@@ -330,7 +330,7 @@ export default function Quote() {
                       type={field.type}
                       value={(formData as any)[field.key]}
                       onChange={e => updateForm(field.key, e.target.value)}
-                      className="w-full bg-white border-b border-thread px-2 py-4 font-prose text-xl outline-none focus:border-madder transition-colors placeholder:text-warp/20 rounded-none"
+                      className="w-full bg-umber/40 border-b border-thread/40 px-4 py-4 font-prose text-xl outline-none focus:border-gilt transition-colors text-warp placeholder:text-warp/30 rounded-none"
                       placeholder={`Enter ${field.label.toLowerCase()}...`}
                     />
                   </div>

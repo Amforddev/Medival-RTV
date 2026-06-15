@@ -52,7 +52,7 @@ export default function Trust() {
              <span className="font-engraved tracking-widest text-[11px] text-madder mb-2">SECTION B</span>
              <h2 className="font-gothic text-4xl text-warp mb-6">Export Documentation Checklist</h2>
              
-             <PanelFrame className="p-6 md:p-8 bg-white/50 mb-8">
+             <PanelFrame className="p-6 md:p-8 bg-umber/60 mb-8">
                <ul className="flex flex-col gap-4">
                  {[
                    "Commercial Invoice (3 Originals, 3 Copies)",
@@ -91,12 +91,12 @@ export default function Trust() {
              </p>
              
              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                <div className="flex items-center gap-3 bg-white p-4 border border-warp/10">
-                   <ShieldCheck className="w-5 h-5 text-verdure" />
+                <div className="flex items-center gap-3 bg-umber/50 p-4 border border-thread/30">
+                   <ShieldCheck className="w-5 h-5 text-gilt" />
                    <span className="font-prose text-warp">Zero Advance Risk</span>
                 </div>
-                <div className="flex items-center gap-3 bg-white p-4 border border-warp/10">
-                   <CheckCircle className="w-5 h-5 text-verdure" />
+                <div className="flex items-center gap-3 bg-umber/50 p-4 border border-thread/30">
+                   <CheckCircle className="w-5 h-5 text-gilt" />
                    <span className="font-prose text-warp">Document-bound Payment</span>
                 </div>
              </div>
