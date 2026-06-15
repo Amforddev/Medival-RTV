@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { FileText, Sprout, Wheat, Leaf, Flame, Waves } from 'lucide-react';
 import { RibbonButton } from '../components/ui/ChronicleComponents';
+import pineappleImg from '../assets/images/fresh_pineapple_1781555402430.jpg';
 
 const commoditiesData = [
   { id: 'palm', name: 'Palm Oil', cat: 'OILS & AGRICULTURAL COMMODITIES', icon: Sprout, img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW662y3XYVtbpBmpEoMkCyvdMGqsbRYGDpvwjMzeIuhQ' },
@@ -16,7 +17,8 @@ const commoditiesData = [
   { id: 'hibiscus', name: 'Hibiscus (Zobo)', cat: 'BOTANICALS', icon: Leaf, img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpgQayQ8Yf5oGIeY0YWpkejiDHeT3cObvjMdo7VT33AQ' },
   { id: 'ogbono', name: 'Ogbono (Wild Mango Seeds)', cat: 'BOTANICALS', icon: Leaf, img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIyCJZsJcmZ4NipsJCSV_2o9QNb8oh7pX2rFNNfYZ2Ew' },
   { id: 'charcoal', name: 'Charcoal', cat: 'ENERGY & NATURAL PRODUCTS', icon: Flame, img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSXMa80DYe8Pj3g8Pl-GOB1ubArIGa4j_9mDAX2to31g' },
-  { id: 'catfish', name: 'River Catfish', cat: 'SEAFOOD', icon: Waves, img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1MQCmX9KFc18Dg3ib3qv6oZ7ZyuypxYpR73U3RwxDYw' }
+  { id: 'catfish', name: 'River Catfish', cat: 'SEAFOOD', icon: Waves, img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1MQCmX9KFc18Dg3ib3qv6oZ7ZyuypxYpR73U3RwxDYw' },
+  { id: 'pineapple', name: 'Pineapple', cat: 'FRUITS', icon: Leaf, img: pineappleImg }
 ];
 
 export default function Commodities() {
