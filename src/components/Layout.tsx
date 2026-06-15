@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Globe, Menu, X, Facebook, Instagram, Twitter, Linkedin, MessageCircle } from 'lucide-react';
+import { Globe, Menu, X, Facebook, Instagram, Linkedin, MessageCircle } from 'lucide-react';
 import { TapestryBand, RibbonButton } from './ui/ChronicleComponents';
 import Breadcrumbs from './Breadcrumbs';
 import { motion, AnimatePresence } from 'motion/react';
@@ -13,6 +13,28 @@ function changeLanguage(langCode: string) {
     selectField.dispatchEvent(new Event("change"));
   }
 }
+
+const TikTokIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
+  <svg 
+    className={className} 
+    fill="currentColor" 
+    viewBox="0 0 24 24" 
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.02 1.62 4.17 1.21 1.34 2.94 2.11 4.74 2.22v3.91c-1.63-.09-3.19-.68-4.51-1.64-.32-.23-.62-.48-.9-.76v7.41c.02 4.09-2.92 7.71-6.99 8.16-3.88.58-7.73-1.84-8.62-5.69-1.07-4.14 1.25-8.48 5.31-9.52.88-.24 1.8-.31 2.71-.21v3.95c-1.3-.39-2.73-.13-3.8 0.67-1.3 0.91-1.92 2.58-1.55 4.15.42 2.05 2.37 3.5 4.45 3.3 2.18-.08 3.91-1.98 3.91-4.17.02-3.19.01-6.38.01-9.57.01-1.35.01-2.7.01-4.05z" />
+  </svg>
+);
+
+const XLogoIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
+  <svg 
+    className={className} 
+    fill="currentColor" 
+    viewBox="0 0 24 24" 
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
 
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -221,7 +243,8 @@ function Footer() {
           <div className="flex items-center gap-4">
             <a href="https://web.facebook.com/theroundtableventures" target="_blank" rel="noopener noreferrer" aria-label="Visit our official Facebook page" className="text-linen/50 hover:text-linen transition-colors"><Facebook className="w-5 h-5"/></a>
             <a href="https://www.instagram.com/theroundtableventuresltd/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram" className="text-linen/50 hover:text-linen transition-colors"><Instagram className="w-5 h-5"/></a>
-            <a href="#" aria-label="Visit our digital Twitter archive" className="text-linen/50 hover:text-linen transition-colors"><Twitter className="w-5 h-5"/></a>
+            <a href="https://www.tiktok.com/@the.roundtable.ve?_r=1&_t=ZS-97ECq2rUg9U" target="_blank" rel="noopener noreferrer" aria-label="Follow us on TikTok" className="text-linen/50 hover:text-linen transition-colors"><TikTokIcon className="w-5 h-5"/></a>
+            <a href="https://x.com/theroundexports?s=11" target="_blank" rel="noopener noreferrer" aria-label="Follow us on X" className="text-linen/50 hover:text-linen transition-colors"><XLogoIcon className="w-5 h-5"/></a>
           </div>
 
           <div className="flex items-center gap-6">

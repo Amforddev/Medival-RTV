@@ -296,14 +296,16 @@ export default function Home() {
             </div>
 
             <div className="w-full max-w-6xl relative group flex justify-center">
-              <div className="w-full bg-warp overflow-hidden border border-gilt/10 shadow-2xl relative">
+              <div className="w-full bg-[#000918] overflow-hidden shadow-2xl relative">
                 <img 
                   src="/Map.png"
                   alt="Global map showing Nigeria, Ghana, Kenya, Rwanda" 
-                  loading="lazy"
-                  decoding="async"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="sync"
                   referrerPolicy="no-referrer"
-                  className="w-full object-contain mix-blend-screen opacity-90 transition-opacity duration-500" 
+                  className="w-full object-contain transition-opacity duration-500" 
+                  style={{ backgroundColor: '#000918' }}
                 />
               </div>
             </div>

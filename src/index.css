@@ -4,7 +4,7 @@
 @theme {
   --color-linen: #ECE5D5;
   --color-warp: #FFFFFF;
-  --color-umber: #0B1327;
+  --color-umber: #000918;
   --color-madder: #E44C34;
   --color-gilt: #CFA953;
   --color-verdure: #253326;
@@ -78,7 +78,7 @@
 }
 
 body {
-  background-color: #060F25;
+  background-color: #000918;
   color: var(--color-warp);
   font-family: var(--font-prose);
   position: relative;
@@ -90,34 +90,34 @@ body::before {
   inset: 0;
   pointer-events: none;
   background-image: 
-    linear-gradient(to right, rgba(207, 169, 83, 0.035) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(207, 169, 83, 0.035) 1px, transparent 1px);
-  background-size: 32px 32px;
+    linear-gradient(to right, rgba(142, 158, 180, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(142, 158, 180, 0.05) 1px, transparent 1px);
+  background-size: 80px 80px;
   z-index: 50;
 }
 
 /* Background overrides to keep the entire website consistently dark navy */
 .bg-linen {
-  background-color: #060F25 !important;
+  background-color: #000918 !important;
 }
 
 .bg-linen\/90 {
-  background-color: rgba(6, 15, 37, 0.9) !important;
+  background-color: rgba(0, 9, 24, 0.9) !important;
 }
 
 .bg-linen\/50 {
-  background-color: rgba(11, 19, 39, 0.5) !important;
+  background-color: rgba(0, 9, 24, 0.5) !important;
 }
 
 .bg-linen\/30 {
-  background-color: rgba(11, 19, 39, 0.3) !important;
+  background-color: rgba(0, 9, 24, 0.3) !important;
 }
 
 .bg-warp {
-  background-color: #0B1327 !important;
+  background-color: #000918 !important;
 }
 
 .bg-umber {
-  background-color: #0B1327 !important;
+  background-color: #000918 !important;
 }
 
