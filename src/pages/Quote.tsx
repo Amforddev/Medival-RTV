@@ -15,8 +15,7 @@ const commodities = [
   { id: 'hibiscus', name: 'Hibiscus (Zobo)' },
   { id: 'ogbono', name: 'Ogbono (Wild Mango Seeds)' },
   { id: 'charcoal', name: 'Charcoal' },
-  { id: 'catfish', name: 'River Catfish' },
-  { id: 'pineapple', name: 'Pineapple' }
+  { id: 'catfish', name: 'River Catfish' }
 ];
 
 const commodityPackagingOptions: Record<string, { value: string; label: string }[]> = {
