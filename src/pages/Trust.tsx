@@ -1,4 +1,4 @@
-import { FileText, Download, CheckCircle, ShieldCheck } from 'lucide-react';
+import { FileText, CheckCircle, ShieldCheck } from 'lucide-react';
 import { RibbonButton, WaxSeal, PanelFrame } from '../components/ui/ChronicleComponents';
 
 export default function Trust() {
@@ -33,10 +33,7 @@ export default function Trust() {
              <p className="font-prose text-lg text-warp/80 leading-relaxed mb-6">
                Trust is good, but certification is better. We partner with SGS (Société Générale de Surveillance) to provide independent inspection, verification, testing, and certification services for all our outward shipments. Before the shipping containers are sealed, an SGS surveyor confirms the quality, weight, and condition of the goods against the agreed specifications.
              </p>
-             <button className="flex items-center gap-2 group border border-warp/20 px-6 py-3 transition-colors bg-white hover:bg-warp/5 w-max">
-                <Download className="w-5 h-5 text-madder group-hover:text-warp transition-colors" />
-                <span className="font-engraved text-xs font-semibold tracking-widest text-warp">DOWNLOAD SAMPLE SGS REPORT</span>
-             </button>
+
           </div>
         </section>
 
@@ -73,10 +70,7 @@ export default function Trust() {
                </ul>
              </PanelFrame>
 
-             <button className="flex items-center gap-2 group border border-warp/20 px-6 py-3 transition-colors bg-white hover:bg-warp/5 w-max">
-                <Download className="w-5 h-5 text-madder group-hover:text-warp transition-colors" />
-                <span className="font-engraved text-xs font-semibold tracking-widest text-warp">DOWNLOAD MASTER CHECKLIST</span>
-             </button>
+
           </div>
         </section>
 

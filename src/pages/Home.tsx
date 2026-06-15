@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
+import cultivationImg from '../assets/images/strawberry_harvest_1781456355178.jpg';
 import { 
   TapestryBand, 
   MillefleurStrip, 
@@ -8,6 +9,7 @@ import {
   PanelFrame,
   WaxSeal
 } from '../components/ui/ChronicleComponents';
+import ScrollReveal from '../components/ScrollReveal';
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 28 },
@@ -99,206 +101,212 @@ export default function Home() {
 
       {/* PANEL 2: CHAPTER I */}
       <TapestryBand thin />
-      <motion.section 
-        className="py-24 px-6 relative bg-linen z-10"
-        initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
-        variants={sectionVariants}
-      >
-        <div className="max-w-6xl mx-auto flex flex-col items-center">
-          <div className="text-center mb-14 w-full flex flex-col items-center">
-            <span className="font-engraved text-xs text-madder tracking-[0.3em] uppercase mb-3">Chapter the First — Origin</span>
-            <h2 className="font-gothic text-[40px] md:text-[50px] text-warp">
-              <span className="text-gilt mr-2">I.</span>The Land
-            </h2>
-            <OrnamentDivider />
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
-            <div className="flex flex-col gap-6">
-              <p className="font-prose text-lg text-warp/90 leading-[1.9] drop-cap">
-                Before any vessel is laden, there is the land. Across the river plains and red-earth belts of Nigeria, smallholder farmers raise the crops this house was founded to carry: oil palm and sesame, cowpea and ginger, hibiscus, egusi and cashew. We buy at origin, from the people who grow it.
-              </p>
-              <p className="font-prose text-lg text-warp/80 italic">
-                The Roundtable takes its name in earnest: farmer, processor, surveyor and buyer each hold a seat, and no consignment moves until every seat is satisfied.
-              </p>
-              <Link to="/about" className="font-engraved text-xs text-madder border-b border-madder/40 pb-1 w-max hover:text-warp transition-colors mt-2">
-                READ THE FULL HISTORY →
-              </Link>
+      <section className="py-24 px-6 relative bg-linen z-10">
+        <ScrollReveal>
+          <div className="max-w-6xl mx-auto flex flex-col items-center">
+            <div className="text-center mb-14 w-full flex flex-col items-center">
+              <span className="font-engraved text-xs text-madder tracking-[0.3em] uppercase mb-3">Chapter the First — Origin</span>
+              <h2 className="font-gothic text-[40px] md:text-[50px] text-warp">
+                <span className="text-gilt mr-2">I.</span>The Land
+              </h2>
+              <OrnamentDivider />
             </div>
 
-            <motion.div 
-              className="flex flex-col items-center w-full"
-              initial={{ opacity: 0, scale: 1.04 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1 }}
-            >
-              <div className="w-full max-w-[28rem] aspect-[3/4] mask-arch bg-verdure relative overflow-hidden group">
-                <img 
-                  src="https://images.unsplash.com/photo-1594806622830-6625facd0901?q=80&w=1200&auto=format&fit=crop" 
-                  alt="West African Farm Cultivation"
-                  className="w-full h-full object-cover filter-tapestry group-hover:scale-105 transition-transform duration-[1.5s]"
-                />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+              <div className="flex flex-col gap-6">
+                <p className="font-prose text-lg text-warp/90 leading-[1.9] drop-cap">
+                  Before any vessel is laden, there is the land. Across the river plains and red-earth belts of Nigeria, smallholder farmers raise the crops this house was founded to carry: oil palm and sesame, cowpea and ginger, hibiscus, egusi and cashew. We buy at origin, from the people who grow it.
+                </p>
+                <p className="font-prose text-lg text-warp/80 italic">
+                  The Roundtable takes its name in earnest: farmer, processor, surveyor and buyer each hold a seat, and no consignment moves until every seat is satisfied.
+                </p>
+                <Link to="/about" className="font-engraved text-xs text-madder border-b border-madder/40 pb-1 w-max hover:text-warp transition-colors mt-2">
+                  READ THE FULL HISTORY →
+                </Link>
               </div>
-              <span className="font-engraved text-[11px] text-thread mt-4 text-center">PLATE I — THE CULTIVATION</span>
-            </motion.div>
+
+              <div className="flex flex-col items-center w-full">
+                <div className="w-full max-w-[28rem] aspect-[3/4] mask-arch bg-verdure relative overflow-hidden group">
+                  <img 
+                    src="https://images.unsplash.com/photo-1530507629858-e4977d30e9e0?q=80&w=2070&auto=format&fit=crop" 
+                    alt="West African Farm Cultivation"
+                    loading="lazy"
+                    referrerPolicy="no-referrer"
+                    className="w-full h-full object-cover filter-tapestry group-hover:scale-105 transition-transform duration-[1.5s]"
+                  />
+                </div>
+                <span className="font-engraved text-[11px] text-thread mt-4 text-center">PLATE I — THE CULTIVATION</span>
+              </div>
+            </div>
           </div>
-        </div>
-      </motion.section>
+        </ScrollReveal>
+      </section>
 
       {/* PANEL 3: CHAPTER II */}
       <TapestryBand thin />
-      <motion.section 
-        className="py-24 px-6 relative bg-linen"
-        initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
-        variants={sectionVariants}
-      >
+      <section className="py-24 px-6 relative bg-linen">
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'url(#pattern-soft)', opacity: 0.4 }} />
         
-        <div className="max-w-7xl mx-auto relative z-10 flex flex-col items-center">
-          <div className="text-center mb-16 w-full flex flex-col items-center">
-            <span className="font-engraved text-xs text-madder tracking-[0.3em] uppercase mb-3">Chapter the Second — What we export</span>
-            <h2 className="font-gothic text-[40px] md:text-[50px] text-warp">
-              <span className="text-gilt mr-2">II.</span>The Treasures
-            </h2>
-            <OrnamentDivider />
-          </div>
+        <ScrollReveal>
+          <div className="max-w-7xl mx-auto relative z-10 flex flex-col items-center">
+            <div className="text-center mb-16 w-full flex flex-col items-center">
+              <span className="font-engraved text-xs text-madder tracking-[0.3em] uppercase mb-3">Chapter the Second — What we export</span>
+              <h2 className="font-gothic text-[40px] md:text-[50px] text-warp">
+                <span className="text-gilt mr-2">II.</span>The Treasures
+              </h2>
+              <OrnamentDivider />
+            </div>
 
-          <motion.div 
-            className="grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-5 md:gap-7 w-full"
-            variants={staggerContainer}
-          >
-            {[
-              { id: 'palm', name: 'Palm Oil', cat: 'OILS & AGRICULTURAL COMMODITIES', img: 'https://images.unsplash.com/photo-1620023473210-91950e1898da?w=500&auto=format&fit=crop' },
-              { id: 'sesame', name: 'Sesame Seeds', cat: 'SEEDS & NUTS', img: 'https://images.unsplash.com/photo-1589146199343-4dc975bde783?w=500&auto=format&fit=crop' },
-              { id: 'ginger', name: 'Dried Ginger', cat: 'SPICES & AGRO-PROCESSED', img: 'https://images.unsplash.com/photo-1615485458927-4a0bfaa57a27?w=500&auto=format&fit=crop' },
-              { id: 'hibiscus', name: 'Hibiscus (Zobo)', cat: 'BOTANICALS', img: 'https://images.unsplash.com/photo-1596700726715-de1610427845?w=500&auto=format&fit=crop' }
-            ].map((item, idx) => (
-              <motion.div key={item.name} variants={staggerItem}>
-                 <Link to={`/commodities/${item.id}`}>
-                    <PanelFrame className="p-3 md:p-4 group">
-                      <div className="aspect-[4/5] mask-arch bg-verdure/20 overflow-hidden relative mb-4">
-                        <img 
-                          src={item.img} 
-                          alt={item.name}
-                          className="w-full h-full object-cover filter-tapestry group-hover:scale-105 transition-transform duration-700" 
-                        />
-                      </div>
-                      <div className="flex flex-col items-center text-center pb-2 px-1">
-                        <h3 className="font-gothic text-xl md:text-2xl text-warp leading-tight mb-2">{item.name}</h3>
-                        <span className="font-engraved text-[9px] md:text-[10px] text-thread tracking-[0.3em] uppercase">{item.cat}</span>
-                      </div>
-                    </PanelFrame>
-                 </Link>
-              </motion.div>
-            ))}
-          </motion.div>
-          
-          <div className="mt-14 w-full flex justify-center">
-             <Link to="/commodities">
-                <RibbonButton variant="ghost">VIEW ALL TREASURES</RibbonButton>
-             </Link>
-          </div>
+            <div className="grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-5 md:gap-7 w-full">
+              {[
+                { id: 'palm', name: 'Palm Oil', cat: 'OILS & AGRICULTURAL COMMODITIES', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW662y3XYVtbpBmpEoMkCyvdMGqsbRYGDpvwjMzeIuhQ' },
+                { id: 'sesame', name: 'Sesame Seeds', cat: 'SEEDS & NUTS', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgkjShdn_iKUzP3Ln-kPX4XadWHLe-13bZu4jIcJO0FA' },
+                { id: 'ginger', name: 'Dried Ginger', cat: 'SPICES & AGRO-PROCESSED', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVnZFn8OQhD-D9NLlzg2oux8I2REfhRR7tDKVcqZnLPg' },
+                { id: 'hibiscus', name: 'Hibiscus (Zobo)', cat: 'BOTANICALS', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpgQayQ8Yf5oGIeY0YWpkejiDHeT3cObvjMdo7VT33AQ' }
+              ].map((item, idx) => (
+                <div key={item.name}>
+                   <Link to={`/commodities/${item.id}`} aria-label={`View complete specifications for ${item.name}`}>
+                      <PanelFrame className="p-3 md:p-4 group">
+                        <div className="aspect-[4/5] mask-arch bg-verdure/20 overflow-hidden relative mb-4">
+                          <img 
+                            src={item.img} 
+                            alt={item.name}
+                            loading="lazy"
+                            referrerPolicy="no-referrer"
+                            className="w-full h-full object-cover filter-tapestry group-hover:scale-105 transition-transform duration-700" 
+                          />
+                        </div>
+                        <div className="flex flex-col items-center text-center pb-2 px-1">
+                          <h3 className="font-gothic text-xl md:text-2xl text-warp leading-tight mb-2">{item.name}</h3>
+                          <span className="font-engraved text-[9px] md:text-[10px] text-thread tracking-[0.3em] uppercase">{item.cat}</span>
+                        </div>
+                      </PanelFrame>
+                   </Link>
+                </div>
+              ))}
+            </div>
+            
+            <div className="mt-14 w-full flex justify-center">
+               <Link to="/commodities">
+                  <RibbonButton variant="ghost">VIEW ALL TREASURES</RibbonButton>
+               </Link>
+            </div>
 
-          <p className="font-prose italic text-thread text-lg mt-12 text-center max-w-xl">
-            Thirteen goods, one standard. Each card opens its full specification and logistics.
-          </p>
-        </div>
-      </motion.section>
+            <p className="font-prose italic text-thread text-lg mt-12 text-center max-w-xl">
+              Thirteen goods, one standard. Each card opens its full specification and logistics.
+            </p>
+          </div>
+        </ScrollReveal>
+      </section>
 
       {/* PANEL 4: CHAPTER III */}
       <TapestryBand thin />
-      <motion.section 
-        className="py-24 px-6 relative bg-warp text-linen overflow-hidden"
-        initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
-        variants={sectionVariants}
-      >
+      <section className="py-24 px-6 relative bg-warp text-linen overflow-hidden">
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'url(#pattern-bold)', opacity: 0.07 }} />
 
-        <div className="max-w-6xl mx-auto relative z-10 flex flex-col items-center">
-          <div className="text-center mb-16 w-full flex flex-col items-center">
-            <span className="font-engraved text-xs text-gilt tracking-[0.3em] uppercase mb-3">Chapter the Third — Trust</span>
-            <h2 className="font-gothic text-[40px] md:text-[50px] text-linen">
-              <span className="text-gilt mr-2">III.</span>The Seals
-            </h2>
-            <p className="font-prose italic text-lg text-linen/70 mt-4">
-              No oath is asked of a buyer; the documents swear for us.
-            </p>
-            <div className="mt-6 border-b border-gilt/20 w-32" />
-          </div>
+        <ScrollReveal>
+          <div className="max-w-6xl mx-auto relative z-10 flex flex-col items-center">
+            <div className="text-center mb-16 w-full flex flex-col items-center">
+              <span className="font-engraved text-xs text-gilt tracking-[0.3em] uppercase mb-3">Chapter the Third — Trust</span>
+              <h2 className="font-gothic text-[40px] md:text-[50px] text-linen">
+                <span className="text-gilt mr-2">III.</span>The Seals
+              </h2>
+              <p className="font-prose italic text-lg text-linen/70 mt-4">
+                No oath is asked of a buyer; the documents swear for us.
+              </p>
+              <div className="mt-6 border-b border-gilt/20 w-32" />
+            </div>
 
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 w-full"
-            variants={{
-              hidden: { opacity: 0 },
-              visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
-            }}
-          >
-            {[
-              { l: 'S', title: 'SGS INSPECTED', desc: 'Every consignment examined by independent surveyors before it sails.' },
-              { l: 'P', title: 'PHYTOSANITARY', desc: 'Certified clean of pest and blight, papered for any port of entry.' },
-              { l: 'L', title: 'LC-FRIENDLY', desc: 'We trade by Letter of Credit — payment bound to documents, not promises.' },
-              { l: 'F', title: 'FOB / CIF', desc: 'Incoterms honoured from Lagos to your harbour of choice.' }
-            ].map((badge) => (
-              <motion.div 
-                key={badge.title} 
-                className="flex flex-col items-center text-center gap-5"
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
-                }}
-              >
-                <WaxSeal letter={badge.l} />
-                <div className="flex flex-col items-center gap-3">
-                  <h4 className="font-engraved text-[13px] tracking-[0.18em] text-gilt">{badge.title}</h4>
-                  <p className="font-prose text-[15px] text-linen/75 leading-relaxed">{badge.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </motion.section>
-
-      {/* PANEL 5: CHAPTER IV */}
-      <TapestryBand thin />
-      <motion.section 
-        className="py-24 px-6 relative bg-linen"
-        initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}
-        variants={sectionVariants}
-      >
-        <div className="max-w-6xl mx-auto flex flex-col items-center">
-          <div className="text-center mb-14 w-full flex flex-col items-center">
-            <span className="font-engraved text-xs text-madder tracking-[0.3em] uppercase mb-3">Chapter the Fourth — From order to ocean</span>
-            <h2 className="font-gothic text-[40px] md:text-[50px] text-warp">
-              <span className="text-gilt mr-2">IV.</span>The Voyage
-            </h2>
-            <OrnamentDivider />
-          </div>
-
-          <div className="w-full bg-thread/40 p-[1px] relative shadow-[inset_0_0_0_4px_var(--color-linen),inset_0_0_0_5px_var(--color-thread)]">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[1px]">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 w-full">
               {[
-                { n: 'I', title: 'The Soil', desc: 'Smallholder farms across Nigeria yield the harvest — palm, sesame, ginger, hibiscus.' },
-                { n: 'II', title: 'The Sorting', desc: 'Cleaned, graded and dried to export specification at our processing yards.' },
-                { n: 'III', title: 'The Seal', desc: 'Inspected, fumigated and certified; the documents are drawn and sworn.' },
-                { n: 'IV', title: 'The Sail', desc: 'Containers loaded at the Port of Lagos — 10 to 21 days from order to ocean.' }
-              ].map((step) => (
-                <div key={step.n} className="bg-linen p-8 flex flex-col">
-                  <span className="font-engraved font-semibold text-[48px] text-gilt block mb-4">{step.n}</span>
-                  <h3 className="font-gothic text-2xl text-warp mb-3">{step.title}</h3>
-                  <p className="font-prose text-[15px] text-warp/75 leading-relaxed">{step.desc}</p>
+                { l: 'S', title: 'SGS INSPECTED', desc: 'Every consignment examined by independent surveyors before it sails.' },
+                { l: 'P', title: 'PHYTOSANITARY', desc: 'Certified clean of pest and blight, papered for any port of entry.' },
+                { l: 'L', title: 'LC-FRIENDLY', desc: 'We trade by Letter of Credit — payment bound to documents, not promises.' },
+                { l: 'F', title: 'FOB / CIF', desc: 'Incoterms honoured from Lagos to your harbour of choice.' }
+              ].map((badge) => (
+                <div 
+                  key={badge.title} 
+                  className="flex flex-col items-center text-center gap-5"
+                >
+                  <WaxSeal letter={badge.l} />
+                  <div className="flex flex-col items-center gap-3">
+                    <h4 className="font-engraved text-[13px] tracking-[0.18em] text-gilt">{badge.title}</h4>
+                    <p className="font-prose text-[15px] text-linen/75 leading-relaxed">{badge.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
+        </ScrollReveal>
+      </section>
 
-          <div className="mt-10">
-            <Link to="/lc-guide" className="font-engraved text-xs text-madder border-b border-madder/40 pb-1 w-max hover:text-warp transition-colors block">
-              HOW A LETTER OF CREDIT PROTECTS YOU
-            </Link>
+      {/* PANEL 5: CHAPTER IV */}
+      <TapestryBand thin />
+      <section className="py-24 px-6 relative bg-linen">
+        <ScrollReveal>
+          <div className="max-w-6xl mx-auto flex flex-col items-center">
+            <div className="text-center mb-14 w-full flex flex-col items-center">
+              <span className="font-engraved text-xs text-madder tracking-[0.3em] uppercase mb-3">Chapter the Fourth — From order to ocean</span>
+              <h2 className="font-gothic text-[40px] md:text-[50px] text-warp">
+                <span className="text-gilt mr-2">IV.</span>The Voyage
+              </h2>
+              <OrnamentDivider />
+            </div>
+
+            <div className="w-full bg-thread/40 p-[1px] relative shadow-[inset_0_0_0_4px_var(--color-linen),inset_0_0_0_5px_var(--color-thread)]">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[1px]">
+                {[
+                  { n: 'I', title: 'The Soil', desc: 'Smallholder farms across Nigeria yield the harvest — palm, sesame, ginger, hibiscus.' },
+                  { n: 'II', title: 'The Sorting', desc: 'Cleaned, graded and dried to export specification at our processing yards.' },
+                  { n: 'III', title: 'The Seal', desc: 'Inspected, fumigated and certified; the documents are drawn and sworn.' },
+                  { n: 'IV', title: 'The Sail', desc: 'Containers loaded at the Port of Lagos — 10 to 21 days from order to ocean.' }
+                ].map((step) => (
+                  <div key={step.n} className="bg-linen p-8 flex flex-col">
+                    <span className="font-engraved font-semibold text-[48px] text-gilt block mb-4">{step.n}</span>
+                    <h3 className="font-gothic text-2xl text-warp mb-3">{step.title}</h3>
+                    <p className="font-prose text-[15px] text-warp/75 leading-relaxed">{step.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-10">
+              <Link to="/lc-guide" className="font-engraved text-xs text-madder border-b border-madder/40 pb-1 w-max hover:text-warp transition-colors block">
+                HOW A LETTER OF CREDIT PROTECTS YOU
+              </Link>
+            </div>
           </div>
-        </div>
-      </motion.section>
+        </ScrollReveal>
+      </section>
+
+      {/* PANEL 5: GLOBAL TRAJECTORY */}
+      <TapestryBand thin />
+      <section className="py-24 px-6 relative bg-umber">
+        <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'url(#pattern-bold)', opacity: 0.05 }} />
+        <ScrollReveal direction="up" duration={1.1}>
+          <div className="max-w-7xl mx-auto relative z-10 flex flex-col items-center w-full">
+            <div className="text-center mb-12 w-full flex flex-col items-center">
+              <span className="font-engraved text-xs text-gilt tracking-[0.3em] uppercase mb-3">Our Footprint</span>
+              <h2 className="font-gothic text-[40px] md:text-[50px] text-linen">
+                Global Trajectory
+              </h2>
+              <div className="w-16 h-[1px] bg-gilt/40 mx-auto mt-6" />
+            </div>
+
+            <div className="w-full max-w-6xl relative group flex justify-center">
+              <div className="w-full bg-warp overflow-hidden border border-gilt/10 shadow-2xl relative">
+                <img 
+                  src="/Map.png"
+                  alt="Global map showing Nigeria, Ghana, Kenya, Rwanda" 
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                  className="w-full object-contain mix-blend-screen opacity-90 transition-opacity duration-500" 
+                />
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
+      </section>
 
       {/* PANEL 6: EPILOGUE */}
       <TapestryBand />

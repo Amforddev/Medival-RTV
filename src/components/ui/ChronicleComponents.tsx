@@ -1,4 +1,65 @@
-import { ReactNode } from "react";
+import { ReactNode, useState, useRef, useEffect } from "react";
+import { ChevronDown } from "lucide-react";
+
+export function CustomSelect({ 
+  value, 
+  onChange, 
+  options, 
+  placeholder = "Select..." 
+}: { 
+  value: string; 
+  onChange: (val: string) => void;
+  options: {value: string, label: string}[];
+  placeholder?: string;
+}) {
+  const [isOpen, setIsOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (ref.current && !ref.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const selectedOption = options.find(o => o.value === value);
+
+  return (
+    <div className="relative w-full" ref={ref}>
+      <button 
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full bg-white border border-thread p-4 font-prose text-lg text-left flex items-center justify-between transition-colors hover:border-warp focus:border-madder outline-none"
+      >
+        <span className={value ? "text-warp" : "text-warp/40"}>
+          {selectedOption ? selectedOption.label : placeholder}
+        </span>
+        <ChevronDown className={`w-5 h-5 text-warp transition-transform ${isOpen ? "rotate-180" : ""}`} />
+      </button>
+
+      {isOpen && (
+        <div className="absolute top-full left-0 w-full mt-1 bg-white border border-thread shadow-xl z-50 max-h-60 overflow-y-auto">
+          {options.map((option) => (
+            <button
+              key={option.value}
+              type="button"
+              className={`w-full text-left p-4 font-prose text-lg transition-colors hover:bg-warp/5 ${value === option.value ? 'bg-warp/5 text-madder' : 'text-warp'}`}
+              onClick={() => {
+                onChange(option.value);
+                setIsOpen(false);
+              }}
+            >
+              {option.label}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 export function TapestryBand({ thin = false }: { thin?: boolean }) {
   const height = thin ? 14 : 26;
@@ -95,7 +156,7 @@ export function RibbonButton({
 export function PanelFrame({ children, className = "" }: { children: ReactNode, className?: string }) {
   return (
     <div 
-      className={`relative bg-linen border border-thread transition-transform duration-300 hover:-translate-y-1 ${className}`}
+      className={`relative bg-parchment border border-thread transition-transform duration-300 hover:-translate-y-1 ${className}`}
       style={{
         boxShadow: 'inset 0 0 0 4px var(--color-linen), inset 0 0 0 5px var(--color-thread)'
       }}

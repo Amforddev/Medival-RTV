@@ -5,19 +5,18 @@ import { FileText, Sprout, Wheat, Leaf, Flame, Waves } from 'lucide-react';
 import { RibbonButton } from '../components/ui/ChronicleComponents';
 
 const commoditiesData = [
-  { id: 'palm', name: 'Palm Oil', cat: 'OILS & AGRICULTURAL COMMODITIES', icon: Sprout, img: 'https://images.unsplash.com/photo-1620023473210-91950e1898da?w=800' },
-  { id: 'beans', name: 'Beans', cat: 'OILS & AGRICULTURAL COMMODITIES', icon: Sprout, img: 'https://images.unsplash.com/photo-1551462147-195b871c8ba6?w=800' },
-  { id: 'sesame', name: 'Sesame Seeds', cat: 'SEEDS & NUTS', icon: Wheat, img: 'https://images.unsplash.com/photo-1589146199343-4dc975bde783?w=800' },
-  { id: 'chia', name: 'Chia Seeds', cat: 'SEEDS & NUTS', icon: Wheat, img: 'https://images.unsplash.com/photo-1622484211148-f1c1facc0d1a?w=800' },
-  { id: 'cashew', name: 'Cashew Nuts', cat: 'SEEDS & NUTS', icon: Wheat, img: 'https://images.unsplash.com/photo-1599424789506-69a03f47c207?w=800' },
-  { id: 'egusi', name: 'Egusi (Melon Seeds)', cat: 'SEEDS & NUTS', icon: Wheat, img: 'https://images.unsplash.com/photo-1601620585641-fcfdd4da428f?w=800' },
-  { id: 'ginger', name: 'Dried Ginger', cat: 'SPICES & AGRO-PROCESSED', icon: Leaf, img: 'https://images.unsplash.com/photo-1615485458927-4a0bfaa57a27?w=800' },
-  { id: 'ginger-powder', name: 'Ginger Powder', cat: 'SPICES & AGRO-PROCESSED', icon: Leaf, img: 'https://images.unsplash.com/photo-1596541604085-f0cc04ef4c2b?w=800' },
-  { id: 'chilli', name: 'Chilli Powder', cat: 'SPICES & AGRO-PROCESSED', icon: Leaf, img: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800' },
-  { id: 'hibiscus', name: 'Hibiscus (Zobo)', cat: 'BOTANICALS', icon: Leaf, img: 'https://images.unsplash.com/photo-1596700726715-de1610427845?w=800' },
-  { id: 'ogbono', name: 'Ogbono (Wild Mango Seeds)', cat: 'BOTANICALS', icon: Leaf, img: 'https://images.unsplash.com/photo-1588667523999-f41bfab958ec?w=800' },
-  { id: 'charcoal', name: 'Charcoal', cat: 'ENERGY & NATURAL PRODUCTS', icon: Flame, img: 'https://images.unsplash.com/photo-1549405230-05e8e8edb132?w=800' },
-  { id: 'catfish', name: 'River Catfish', cat: 'SEAFOOD', icon: Waves, img: 'https://images.unsplash.com/photo-1516684732162-801fc751a0b3?w=800' }
+  { id: 'palm', name: 'Palm Oil', cat: 'OILS & AGRICULTURAL COMMODITIES', icon: Sprout, img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW662y3XYVtbpBmpEoMkCyvdMGqsbRYGDpvwjMzeIuhQ' },
+  { id: 'beans', name: 'Beans', cat: 'OILS & AGRICULTURAL COMMODITIES', icon: Sprout, img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeJOA6m5q7R4OVrSSISGQjwYWLlvQSY5nqjtFjVZlXhw' },
+  { id: 'sesame', name: 'Sesame Seeds', cat: 'SEEDS & NUTS', icon: Wheat, img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgkjShdn_iKUzP3Ln-kPX4XadWHLe-13bZu4jIcJO0FA' },
+  { id: 'chia', name: 'Chia Seeds', cat: 'SEEDS & NUTS', icon: Wheat, img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRazIjxE9hc2YWQLT2Wt_OenORZRbs7QJAt58KfFItI-A' },
+  { id: 'cashew', name: 'Cashew Nuts', cat: 'SEEDS & NUTS', icon: Wheat, img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmyenBb2CTBfC9RMUqSp9gI3O1vT3dbuNjw_o_kz9Mmg' },
+  { id: 'egusi', name: 'Egusi (Melon Seeds)', cat: 'SEEDS & NUTS', icon: Wheat, img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPvvBGQJgH8vYJ74KBeflgOxQBsGVMd9IMDPmiXNsZrg' },
+  { id: 'ginger', name: 'Dried Ginger', cat: 'SPICES & AGRO-PROCESSED', icon: Leaf, img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVnZFn8OQhD-D9NLlzg2oux8I2REfhRR7tDKVcqZnLPg' },
+  { id: 'ginger-powder', name: 'Ginger Powder', cat: 'SPICES & AGRO-PROCESSED', icon: Leaf, img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZfhYMAkQrQvrLBgdVYFuhi2Dh2dh620xM_eUddQNNdA' },
+  { id: 'hibiscus', name: 'Hibiscus (Zobo)', cat: 'BOTANICALS', icon: Leaf, img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpgQayQ8Yf5oGIeY0YWpkejiDHeT3cObvjMdo7VT33AQ' },
+  { id: 'ogbono', name: 'Ogbono (Wild Mango Seeds)', cat: 'BOTANICALS', icon: Leaf, img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIyCJZsJcmZ4NipsJCSV_2o9QNb8oh7pX2rFNNfYZ2Ew' },
+  { id: 'charcoal', name: 'Charcoal', cat: 'ENERGY & NATURAL PRODUCTS', icon: Flame, img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSXMa80DYe8Pj3g8Pl-GOB1ubArIGa4j_9mDAX2to31g' },
+  { id: 'catfish', name: 'River Catfish', cat: 'SEAFOOD', icon: Waves, img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1MQCmX9KFc18Dg3ib3qv6oZ7ZyuypxYpR73U3RwxDYw' }
 ];
 
 export default function Commodities() {
@@ -66,6 +65,7 @@ export default function Commodities() {
                          <Link
                            key={item.id}
                            to={`/commodities/${item.id}`}
+                           aria-label={`View detailed profile for ${item.name}`}
                            className={`font-engraved font-bold uppercase text-xs pb-2 transition-colors relative ${item.id === activeItem.id ? 'text-verdure' : 'text-warp/60 hover:text-warp'}`}
                          >
                            {item.name}
@@ -93,6 +93,7 @@ export default function Commodities() {
               <Link 
                 key={item.id} 
                 to={`/commodities/${item.id}`}
+                aria-label={`Show specifications for ${item.name}`}
                 className={`flex items-center gap-3 p-3 transition-colors border-l-2 ${isActive ? 'bg-warp/5 border-madder' : 'border-transparent hover:bg-warp/5'}`}
               >
                 <Icon className={`w-5 h-5 ${isActive ? 'text-madder' : 'text-warp/40'}`} strokeWidth={1.5} />
@@ -118,6 +119,8 @@ export default function Commodities() {
                 <img 
                   src={activeItem.img} 
                   alt={activeItem.name}
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
                   className="w-full h-full object-cover filter-tapestry group-hover:scale-105 transition-transform duration-1000"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-warp/90 via-warp/40 to-transparent flex flex-col justify-end p-8">
@@ -128,10 +131,11 @@ export default function Commodities() {
 
               {/* Tabs */}
               <div className="flex gap-8 border-b border-warp/10 mb-8 overflow-x-auto no-scrollbar">
-                {['Specs', 'Logistics', 'Certifications'].map(tab => (
+                {['Specs', 'Logistics'].map(tab => (
                   <button
                     key={tab}
                     onClick={() => setActiveTab(tab)}
+                    aria-label={`Switch specification view to ${tab}`}
                     className={`font-engraved uppercase text-xs pb-3 pt-1 transition-colors relative ${activeTab === tab ? 'text-warp' : 'text-warp/50 hover:text-warp'}`}
                   >
                     {tab}
@@ -187,27 +191,10 @@ export default function Commodities() {
                     </div>
                   </div>
                 )}
-
-                {activeTab === 'Certifications' && (
-                  <div className="flex flex-col gap-6">
-                     <p className="font-prose italic text-warp/80 text-lg">
-                       All consignments of {activeItem.name} are subject to full independent verification prior to sailing.
-                     </p>
-                     <div className="flex items-center gap-4 p-4 border border-thread/30 bg-warp/5">
-                        <FileText className="text-madder w-6 h-6" />
-                        <span className="font-gothic text-xl text-warp">SGS Inspection Report Available</span>
-                     </div>
-                  </div>
-                )}
               </div>
 
               {/* Action Buttons */}
               <div className="mt-12 pt-8 border-t border-warp/10 flex flex-col sm:flex-row items-center gap-6">
-                <button className="flex items-center gap-2 group border border-transparent hover:border-warp/20 px-6 py-3 transition-colors bg-warp/5">
-                  <FileText className="w-4 h-4 text-madder group-hover:text-warp transition-colors" />
-                  <span className="font-engraved text-xs font-semibold tracking-widest text-warp">DOWNLOAD SPEC SHEET (PDF)</span>
-                </button>
-                
                 <Link to={`/quote?commodity=${activeItem.id}`} className="ml-auto">
                    <RibbonButton variant="primary">REQUEST QUOTE FOR THIS COMMODITY →</RibbonButton>
                 </Link>
