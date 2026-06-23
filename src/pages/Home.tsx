@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
-import cultivationImg from '../assets/images/strawberry_harvest_1781456355178.jpg';
 import shipLoadingImg from '../assets/images/export_loading_ship_african_1781549845231.jpg';
 import truckLoadingImg from '../assets/images/export_loading_truck_african_1781549859610.jpg';
+import wogu1 from '../assets/images/regenerated_image_1782221455923.png';
+import wogu2 from '../assets/images/wogu_2.jpeg';
+import wogu3 from '../assets/images/wogu_3.jpeg';
 import { 
   TapestryBand, 
   MillefleurStrip, 
@@ -377,7 +379,29 @@ export default function Home() {
         </ScrollReveal>
       </section>
 
-      {/* PANEL 6: EPILOGUE */}
+      {/* PANEL 8: LEGAL COUNSEL */}
+      <section className="py-12 px-6 bg-linen border-t border-thread/20">
+        <Link to="/trust" className="block max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 group">
+          <div className="flex-1 text-center md:text-left">
+             <h3 className="font-engraved text-xs md:text-sm tracking-[0.2em] text-madder uppercase mb-3 flex items-center justify-center md:justify-start gap-3">
+               <span className="block w-6 h-[1px] bg-madder/40"/>
+               Retained Legal Counsel
+               <span className="block w-6 h-[1px] bg-madder/40 md:hidden"/>
+             </h3>
+             <p className="font-gothic text-2xl md:text-3xl text-warp mb-3">Sonny O. Wogu & Associates</p>
+             <p className="font-prose text-sm text-warp/70 max-w-xl mx-auto md:mx-0 leading-relaxed">
+               Ensuring the highest standards of international trade compliance. All export documents, contracts, and commercial agreements are rigorously verified by our retained law firm to guarantee secure and seamless global transactions.
+             </p>
+          </div>
+          <div className="flex shrink-0 gap-3 grayscale-[40%] group-hover:grayscale-0 transition-all duration-700">
+             <img src={wogu1} alt="Legal Counsel Partner" className="w-16 h-24 md:w-24 md:h-32 object-cover object-center border border-warp/20 shadow-md transform -rotate-3 transition-transform group-hover:rotate-0" />
+             <img src={wogu2} alt="Legal Counsel Partners Meeting" className="w-16 h-24 md:w-24 md:h-32 object-cover object-center border border-warp/20 shadow-md relative z-10 scale-105 transition-transform group-hover:scale-100" />
+             <img src={wogu3} alt="Counsel in Chambers" className="w-16 h-24 md:w-24 md:h-32 object-cover object-top border border-warp/20 shadow-md transform rotate-3 transition-transform group-hover:rotate-0" />
+          </div>
+        </Link>
+      </section>
+
+      {/* PANEL 9: EPILOGUE */}
       <TapestryBand />
       <section className="relative w-full text-center">
         <MillefleurStrip className="absolute inset-0 z-0 opacity-100" />

@@ -1,5 +1,8 @@
 import { FileText, CheckCircle, ShieldCheck } from 'lucide-react';
 import { RibbonButton, WaxSeal, PanelFrame } from '../components/ui/ChronicleComponents';
+import wogu1 from '../assets/images/regenerated_image_1782221455923.png';
+import wogu2 from '../assets/images/wogu_2.jpeg';
+import wogu3 from '../assets/images/wogu_3.jpeg';
 
 export default function Trust() {
   return (
@@ -108,6 +111,51 @@ export default function Trust() {
               >
                 READ THE FULL L/C GUIDE →
               </RibbonButton>
+          </div>
+        </section>
+
+        <div className="h-[1px] w-full bg-gilt/30 relative">
+           <div className="absolute left-1/2 -translate-x-1/2 -top-1.5 w-3 h-3 rotate-45 border border-gilt/50 bg-linen" />
+        </div>
+
+        {/* SECTION D */}
+        <section className="flex flex-col md:flex-row gap-10 items-start">
+          <div className="shrink-0 flex justify-center w-full md:w-auto">
+             <WaxSeal letter="W" />
+          </div>
+          <div className="flex-1 flex flex-col w-full">
+             <span className="font-engraved tracking-widest text-[11px] text-madder mb-2">SECTION D</span>
+             <h2 className="font-gothic text-4xl text-warp mb-4">Retained Legal Counsel</h2>
+             <p className="font-prose text-lg text-warp/80 leading-relaxed mb-6 font-bold uppercase">
+               Sonny O. Wogu & Associates
+             </p>
+             <p className="font-prose text-lg text-warp/80 leading-relaxed mb-8">
+               Our operations are fully backed and represented by our retained legal counsel, ensuring strict compliance with all international trade laws, secure contracting, and comprehensive due diligence in every export agreement.
+             </p>
+             
+             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <PanelFrame className="p-2 bg-umber/30">
+                   <img 
+                     src={wogu1} 
+                     alt="Sonny O. Wogu & Associates - Partners Handshake" 
+                     className="w-full h-auto aspect-[4/5] object-cover object-center grayscale-[10%] sepia-[5%] border border-gilt/20"
+                   />
+                </PanelFrame>
+                <PanelFrame className="p-2 bg-umber/30">
+                   <img 
+                     src={wogu2} 
+                     alt="Sonny O. Wogu & Associates - Partners Meeting" 
+                     className="w-full h-auto aspect-[4/5] object-cover object-center grayscale-[10%] sepia-[5%] border border-gilt/20"
+                   />
+                </PanelFrame>
+                <PanelFrame className="p-2 bg-umber/30">
+                   <img 
+                     src={wogu3} 
+                     alt="Sonny O. Wogu & Associates - Counsel in Chambers" 
+                     className="w-full h-auto aspect-[4/5] object-cover object-top grayscale-[10%] sepia-[5%] border border-gilt/20"
+                   />
+                </PanelFrame>
+             </div>
           </div>
         </section>
 
